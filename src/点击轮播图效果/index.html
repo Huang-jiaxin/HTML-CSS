@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>无标题文档</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="gallery-section">
+		<div class="inner-width">
+			<h1>My Gallery</h1>
+			<div class="border"></div>
+			<div class="gallery">
+			
+				<a href="img/1.jpg" class="image">
+					<img src="img/1.jpg" alt="">
+				</a>
+			
+				<a href="img/2.jpg" class="image">
+					<img src="img/2.jpg" alt="">
+				</a>
+			
+				<a href="img/3.jpg" class="image">
+					<img src="img/3.jpg" alt="">
+				</a>
+			
+				<a href="img/4.jpg" class="image">
+					<img src="img/4.jpg" alt="">
+				</a>
+			
+				<a href="img/5.jpg" class="image">
+					<img src="img/5.jpg" alt="">
+				</a>
+			
+				<a href="img/6.jpg" class="image">
+					<img src="img/6.jpg" alt="">
+				</a>
+			
+				<a href="img/7.jpg" class="image">
+					<img src="img/7.jpg" alt="">
+				</a>
+			
+				<a href="img/8.jpg" class="image">
+					<img src="img/8.jpg" alt="">
+				</a>
+			
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		$(".gallery").magnificPopup({
+			delegate: 'a',
+			type: 'image',
+			gallery:{
+				enabled: true
+			}
+		});
+	</script>
+	
+	<script>
+    var mouseCircle = function () {
+        document.documentElement.addEventListener('mousemove', function (event) {
+            var x = event.pageX, y = event.pageY;
+            var mouseCircle = document.createElement('div');
+            mouseCircle.className = 'mouseCircle';
+            this.appendChild(mouseCircle);
+            // 动画结束后删除自己
+            mouseCircle.addEventListener('animationend', function () {
+                mouseCircle.parentNode.removeChild(mouseCircle);
+            });
+            // 位置
+            mouseCircle.style.left = (x - mouseCircle.clientWidth / 2) + 'px';
+            mouseCircle.style.top = (y - mouseCircle.clientHeight-10) + 'px';
+        });  
+
+        document.documentElement.addEventListener('click', function (event) {
+            var x = event.pageX, y = event.pageY;
+            var mouseCircle = document.createElement('div');
+            mouseCircle.className = 'mouseCircle';
+            this.appendChild(mouseCircle);
+            // 动画结束后删除自己
+            mouseCircle.addEventListener('animationend', function () {
+                mouseCircle.parentNode.removeChild(mouseCircle);
+            });
+            // 位置
+            mouseCircle.style.left = (x - mouseCircle.clientWidth / 2) + 'px';
+            mouseCircle.style.top = (y - mouseCircle.clientHeight-10) + 'px';
+        });    
+    };
+
+    mouseCircle();
+</script>
+</body>
+</html>
