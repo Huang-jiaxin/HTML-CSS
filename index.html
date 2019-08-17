@@ -35,6 +35,9 @@
   </div>
   <!-- Add Pagination -->
   <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </div>
 
 <!-- countdown.js --> 
@@ -43,13 +46,19 @@
 <!-- Swiper JS --> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script> 
 
-<!-- Initialize Swiper --> 
-<script>
+<!-- Initialize Swiper -->
+  <script>
     var swiper = new Swiper('.swiper-container', {
-      direction: 'vertical',
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     });
   </script>
