@@ -6,6 +6,10 @@
 	padding: 0;
 }
 
+body{
+	background: #3498db;
+}
+
 .center{
 	position: absolute;
 	top: 50%;
