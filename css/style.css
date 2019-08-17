@@ -1,6 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-
 html, body {
 	position: relative;
 	height: 100%;
@@ -16,6 +15,8 @@ body {
 .swiper-container {
 	width: 100%;
 	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 .swiper-slide {
 	text-align: center;
@@ -35,8 +36,6 @@ body {
 	-webkit-align-items: center;
 	align-items: center;
 }
-
-
 iframe {
 	width: 800px;
 	height: 600px;
